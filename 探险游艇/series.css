@@ -419,4 +419,71 @@
     background: rgba(255,255,255,0.15);
     font-weight: 600;
 }
+
+/* 品牌展示网格 */
+.brand-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.brand-item {
+    background: rgba(255,255,255,0.1);
+    padding: 30px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.brand-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.15);
+}
+
+.brand-item h3 {
+    color: var(--text-light);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.brand-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.brand-item li {
+    color: var(--text-light);
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-size: 1.1rem;
+}
+
+.brand-item li:last-child {
+    border-bottom: none;
+}
+
+.special-note {
+    background: rgba(255,255,255,0.1);
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+.special-note p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .brand-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .brand-item {
+        padding: 20px;
+    }
+}
 } 

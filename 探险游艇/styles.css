@@ -19,16 +19,27 @@ body {
 
 /* 顶部小导航 */
 .top-bar {
-    background-color: var(--primary-color);
-    padding: 12px 24px;
-    text-align: left;
+    background: var(--primary-color);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+}
+
+.top-bar.hidden {
+    transform: translateY(-100%);
 }
 
 .brand {
     display: flex;
     align-items: center;
-    gap: 15px;
     text-decoration: none;
+    color: var(--text-light);
 }
 
 .brand-icon {
